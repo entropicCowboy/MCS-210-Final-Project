@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Internet Privacy</title>
+
+        <link href="styles.css" rel="stylesheet">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <ul class="navbar">
+            <li><n onclick="location.href='index.html';">Home</n></li>
+            <li><n onclick="location.href='cookies.html';" class="active">Cookies</n></li>
+            <li><n onclick="location.href='fingerprints.html';">Fingerprints</n></li>
+            <li><n onclick="location.href='privacy.html';">Privacy</n></li>
+            <li><n onclick="location.href='acknowledgements.html';">Acknowledgements</n></li>
+        </ul>
+        <h1 class="header"><img class="header_img" src="cookie_clicker.jpg" alt="cookie" width=320>Cookies</h1>
+        <div class="container-box">
+            <ul class="content-box">
+                <li><a onclick="location.href='#c_definition';">What are cookies?</a></li>
+                <li><a onclick="location.href='#consent';">Cookie consent</a></li>
+                <li><a onclick="location.href='#supercookies';">Supercookies</a></li>
+                <li><a onclick="location.href='#clearing';">Clearing cookies</a></li>
+            </ul>
+        </div>
+        <h1 class="heading" id="c_definition">What are cookies?</h1>
+        <p>
+            Websites use HTTP cookies, or Internet/browser cookies, to track information about your time spent on a website and save it when you leave.
+            Some uses of cookies are beneficial to the user’s experience, such as keeping you logged in or saving your shopping cart. The first example
+            is of session management–your “session” being each time you visit a website–and the second, authentification; cookies are also used for
+            personalization, like targeted advertising (Kaspersky). As you can imagine, when you visit a website, it first uses these cookies to identify
+            you in order to, for example, ensure that it logs you into the correct account.
+        </p>
+        <p>
+            There are two types of HTTP cookies: session cookies and persistent cookies. Session cookies are deleted upon exiting a website while
+            persistent cookies are saved forever or just for a certain period of time, able to be accessed over the course of multiple sessions
+            (Kaspersky). Staying logged in is one use of a persistent cookie (Kaspersky); oftentimes, a user need only log in every week or so.
+            Persistent cookies may also be used to track you, accumulating information from each of your sessions to build a profile, which may then
+            be used to suggest certain products to you (Kaspersky). So far, what has been discussed is the activity of first-party cookies, the cookies
+            created by the website you are using (Kaspersky). It is the third-party cookies that are more concerning and the ones you often reject
+            or allow upon visiting a website.
+        </p>
+        <p>
+            Third-party cookies can be created by advertisers whose ads appear on the website you are currently viewing. These advertisers may also
+            track your sessions on any website that contains their ads (Kaspersky). Another example is of social media companies: any time you see a
+            button to share an article or webpage on Facebook, Facebook knows you have visited that site (Hoffman). Google announced in 2020 that it
+            would get rid of third-party cookies by 2022; however, that move was delayed to 2023 and has since been delayed to 2024, so it’s hard to
+            say when this ban will finally be implemented (Chavez qtd. In Morrison).
+        </p>
+        <h1 class="heading" id="consent">Cookie consent</h1>
+        <p>
+            On May 28, 2018, the EU put into effect the General Data Protection Regulation (GDPR), requiring websites to receive user consent before
+            they can use cookies (“What is GDPR?”). Although this law was passed in Europe, many websites handle the data of EU citizens, which means
+            they are subject to this law as well (“What is GDPR?”). This is why you are now often met with a cookie pop-up banner upon entering a website.
+        </p>
+        <p>
+            As a result, websites have taken it upon themselves to implement certain tricks in an effort to maximize the consent given. Some such
+            tactics include forcing the user to deselect all uses of cookies they do not consent to, presenting the user with many options where the
+            default is to “accept all,” highlighting or bolding the “accept all” button, or continually prompting users with the cookie banner each
+            new session despite having already set their preferences (Machuletz and Böhme 481). There are likely many other tactics that are currently
+            in use by various websites, designed to make the act of rejecting cookies as tedious as possible. <br>
+            <button id="open_banner">Like this one</button>
+            <div id="snackbar">Don't worry, this website doesn't actually collect cookies.</div>
+        </p>
+        <div id="cookie_banner" class="popup">
+            <div class="popup-content">
+                <h1>This website uses cookies.</h1>
+                <p>By accepting cookies, you agree...</p>
+                <button id="accept_cookies">Accept all cookies</button>
+                <button id="reject_cookies">Reject all cookies</button>
+            </div>
+        </div>
+        <p>
+            In fact, Facebook, Google, and Youtube made it so difficult to reject cookies that Facebook was fined 60 million euros, and Google 150
+            million, for infringing the French Data Protection Act (CNIL). Due to the pervasiveness of these pop ups, users often become fatigued with
+            selecting their desired settings and instead default to accepting all (Machuletz and Böhme 481). Furthermore, users who choose a default
+            button to accept all cookies are less likely to remember their choice (Machuletz and Böhme 481), implying this decision is less of a
+            conscious decision and more of an automated one, serving the primary purpose, for the user, of eliminating an obstacle to a website rather
+            than consenting to being tracked.
+        </p>
+        <div>
+            The “necessary cookies,” that one must accept do not carry any personal data and thus do not require consent (Machuletz and Böhme 481).
+        </div>
+        <h1 id="supercookies" class="heading">Supercookies</h1>
+        <p>
+            Supercookies aren’t technically cookies, but they are similar in their ability to gather information on users across multiple websites.
+            They are harder to fend against and cannot simply be rejected on a website. Some supercookies, such as the evercookie, store their data
+            in multiple locations, for example browsing history or HTML5 local storage (Hoffman). When a website notices you have deleted a supercookie
+            from one location, the data for such supercookie is copied over from another, making them extremely resilient (Hoffman). This also means it
+            is much more difficult for your browser or another piece of software, to block supercookies.
+        </p>
+        <p>
+            One way a supercookie can identify you is through assigning a unique color to a few pixels when a new user visits a website, which are then
+            stored in the user’s browser cache and loaded back onto the website to identify the user upon the start of a new session (Hoffman). Chrome,
+            Firefox, Brave, Edge, and Tor have all taken steps to protect against supercookies; however, as the supercookies’ duplicitous tactics continue
+            to evolve, these browsers may not be able to stop them all.
+        </p>
+        <h1 id="clearing" class="heading">Clearing cookies</h1>
+        <p>
+            In most browsers, you may use the Ctrl+Shift+Del or Command+Shift+Del shortcut to clear your cookies (Fisher). For more detailed instructions,
+            check out <a href= "https://www.lifewire.com/how-to-delete-cookies-2617981" target="_blank"
+            title="https://www.lifewire.com/how-to-delete-cookies-2617981">this tutorial</a>
+            by Lifewire.
+            Why delete cookies? Sometimes cookies may pick up information you would rather keep secret. Perhaps you have an addiction, medical illness,
+            or other embarrassing secret that could be revealed from your browsing history. Would you want this information available to advertisers
+            when they decide which ads may be most effective toward you? Your data can also be sold to airlines, hotel booking websites, and others to
+            determine the highest price you would be willing to pay when entering their website.
+        </p>
+        <div> Learn more about dynamic pricing and other information about privacy <a href="privacy.html" target="_blank">here</a></div>
+        <p>
+            Fun fact: Google’s incognito browsing still allows third-party cookies but just deletes them from your browsing session. Although this may
+            not seem concerning, did you know that there are other ways to track your browsing activity aside from cookies? Browser fingerprinting is
+            one such way: it can uniquely identify your device and track it across the internet. Fingerprinting is NOT prevented by incognito/private
+            browsing mode, meaning although cookies are deleted upon exiting your private browsing session, the advertisers behind the third-party
+            cookies can still match that activity to your device through use of fingerprinting. In other words, your private browsing session isn’t
+            as private as you think.
+        </p>
+        <div>Learn more about browser fingerprinting and how to fight it <a href="fingerprints.html" target="_blank">here</a></div>
+        <div><a href="cookies.html">Back to top</a></div>
+
+
+        <script>
+            const buttonWidth = 180;
+            const buttonHeight = 50;
+            const maxWidth = (window.innerWidth * 0.63) - buttonWidth;
+            const maxHeight = (window.innerHeight)- buttonHeight;
+            const button = document.getElementById("reject_cookies");
+            const snackbar = document.getElementById("snackbar");
+
+            /* Opens and closes the popup */
+            open_banner.addEventListener("click", function () {
+                cookie_banner.classList.add("show");
+                /* Reset the position each time popup opens */
+                button.style.left = "400px";
+                button.style.top = "355px";
+            });
+            accept_cookies.addEventListener("click", function() {
+                cookie_banner.classList.remove("show");
+                setTimeout(function(){snackbar.className = "show";},400);
+                // After 3 seconds, remove the show class from DIV
+                setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
+            });
+            reject_cookies.addEventListener("click", function() {
+                cookie_banner.classList.remove("show");
+                alert("Congratulations! You managed to evade the cookies.");
+            })
+
+            /* Runaway button--referenced tutorial by PortEXE:
+               https://www.youtube.com/watch?v=Cy6ALx6gx9w */
+            reject_cookies.addEventListener("mouseover", () => {
+                button.style.left = Math.floor(Math.random() * (maxWidth+1)) + 'px';
+                button.style.top = Math.floor(Math.random() * (maxHeight+1)) + 'px';
+            });
+
+            window.addEventListener("click", function (event) {
+                if (event.target == cookie_banner) {
+                    cookie_banner.classList.remove("show");
+                }
+            });
+
+        </script>
+
+    </body>
+</html>

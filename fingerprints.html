@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Internet Privacy</title>
+
+        <link href="styles.css" rel="stylesheet">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <ul class="navbar">
+            <li><n onclick="location.href='index.html';">Home</n></li>
+            <li><n onclick="location.href='cookies.html';">Cookies</n></li>
+            <li><n onclick="location.href='fingerprints.html';" class="active">Fingerprints</n></li>
+            <li><n onclick="location.href='privacy.html';">Privacy</n></li>
+            <li><n onclick="location.href='acknowledgements.html';">Acknowledgements</n></li>
+        </ul>
+        <h1 class="header"><img class="header_img" src="thumbprint.png" alt="thumbprint" width=270>Fingerprints</h1>
+        <div class="container-box">
+            <ul class="content-box">
+                <li><a onclick="location.href='#f_definition';">What are fingerprints?</a></li>
+                <li><a onclick="location.href='#types';">Types of fingerprinting</a></li>
+                <li><a onclick="location.href='#why_dangerous';">Why is it dangerous?</a></li>
+                <li><a onclick="location.href='#protection';">Protection</a></li>
+            </ul>
+        </div>
+        <h1 class="heading" id="f_definition">What are fingerprints?</h1>
+        <p>
+            A browser fingerprint is a form of online tracking. When using a website, scripts run in the background, providing a set of instructions
+            to tell your browser what to do (Avast). These scripts have the ability to access enough information, without you knowing, about your browser
+            settings, device specifications, and other information to uniquely identify you (Avast). Additionally, some information may be gathered
+            passively from the HTTP header (Pugliese et al. 559)--HTTP headers contain metadata that is exchanged between your devices and the websites
+            they access. This means that your unique profile, or “fingerprint,” can be used to track your activity across the Internet, even when using
+            private or incognito browsing, making it more invasive than cookies (Avast).
+        </p>
+        <div>
+            Examples of some information scripts can obtain: your browser and its settings, installed plugins, extensions, or other software, your
+            timezone, your device’s language, font, or operating system, whether you have an adblocker installed
+        </div>
+        <p>
+            In 2018, a study found 35.7% of computer fingerprints, and 18.5% of mobile device fingerprints, to be unique but also declared the state of
+            a non-unique fingerprint to be fragile (Gómez-Boix et al. 312). It only takes a few minor changes in your browser settings or the download
+            of a new plugin to individualize your fingerprint. A long-term study of fingerprinting was later performed in 2020 which found 64.6-94.5%
+            of users trackable with their fingerprint remaining stable an average of 10.7-11.9 weeks (Pugliese et al. 572).
+        </p>
+        <h1 class="heading" id="types">Types of fingerprinting</h1>
+        <ul class="content-box">
+            <li>
+                <strong>Canvas fingerprinting:</strong> this forces your browser to draw a complex image that is not visible to the user, then performs
+                an analysis on the result to identify information about your browser, operating system, graphics card, and more (Avast).
+            </li>
+            <li>
+                <strong>Javascript fingerprinting:</strong> this involves testing which fonts your browser is able to display, as opposed to using a
+                “fallback font” when the desired one is unavailable (Gómez-Boix et al. 311).
+            </li>
+            <li>
+                <strong>Audio fingerprinting:</strong> this makes your browser play an audio sample and uses the outputted soundwaves to gather information
+                about your device.
+            </li>
+        </ul>
+        <br>
+        <h1 class="heading" id="why_dangerous">Why is fingerprinting dangerous?</h1>
+        <p>
+            Though you can delete your cookies, there is no way to delete your browser fingerprint, nor may they be stopped by VPNs (Avast). The scripts
+            that collect your information are also vital for your browser to run the website, without them the website would break (Avast). Fingerprints
+            can be used to track your activity and link it to you despite all other protections you may take. Check how well your computer set-up defends
+            against fingerprinting <a href="https://browserleaks.com/canvas" target="_blank" title="https://browserleaks.com/canvas">here</a> (unique = bad).
+            For a more in-depth explanation of what fingerprinting looks like, check out <a href="https://coveryourtracks.eff.org/" target="blank"
+            title="https://coveryourtracks.eff.org/">this website</a>.
+        </p>
+        <h1 class="heading" id="protection">Preventing fingerprinting</h1>
+        <p>
+            As browser fingerprinting is entirely legal, it is up to you to prevent it on your device. Although VPNs, ad blockers, and private browsing
+            cannot stop fingerprinting, there are other tools you can use to do so.
+        </p>
+        <p>
+            Some browsers contain anti-fingerprinting protection, such as Brave, Firefox, or Epic. Some browsers, like Firefox, will require tweaking
+            some settings to utilize their online tracking and data collection prevention. These will likely offer the best free protection against
+            fingerprinting that exists right now. Alternatively, you can download other software specially designed for keeping you safe from
+            fingerprinting, such as Avast AntiTrack ($49.99/year).
+        </p>
+        <p>
+            Furthermore, some believe fingerprinting will become less dangerous as the Internet evolves–e.g. the departure from plugins such as the
+            once ubiquitous Flash–with one study estimating the removal of HTTP headers and browser plugins to decrease the occurrence of unique
+            fingerprints by 36% (Laperdrix et al.).
+        </p>
+        <div><a href="fingerprints.html">Back to top</a></div>
+    </body>
+</html>
