@@ -5,6 +5,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="https://fonts.gstatic.com/s/e/notoemoji/15.0/1f5ff/32.png">
         <title>Internet Privacy</title>
 
         <link href="styles.css" rel="stylesheet">
@@ -18,8 +19,14 @@
             <li><n onclick="location.href='privacy.html';">Privacy</n></li>
             <li><n onclick="location.href='acknowledgements.html';">Acknowledgements</n></li>
         </ul>
-        <h1 class="header"><img class="header_img" src="cookie_clicker.jpg" alt="cookie" width=320>Cookies</h1>
+        <div id="counter" class="ndiv"></div>
+        <h1 class="header"><img class="header_img" usemap="#cookiemap" src="cookie_clicker.jpg" alt="cookie" width=320>Cookies</h1>
+        <map name="cookiemap">
+            <area id="counter_plus" shape="circle" coords="160,80,63">
+        </map>
+        <br style="display:none;">
         <div class="container-box">
+            <div class="content-header">In this section:</div>
             <ul class="content-box">
                 <li><a onclick="location.href='#c_definition';">What are cookies?</a></li>
                 <li><a onclick="location.href='#consent';">Cookie consent</a></li>
@@ -41,8 +48,8 @@
             (Kaspersky). Staying logged in is one use of a persistent cookie (Kaspersky); oftentimes, a user need only log in every week or so.
             Persistent cookies may also be used to track you, accumulating information from each of your sessions to build a profile, which may then
             be used to suggest certain products to you (Kaspersky). So far, what has been discussed is the activity of first-party cookies, the cookies
-            created by the website you are using (Kaspersky). It is the third-party cookies that are more concerning and the ones you often reject
-            or allow upon visiting a website.
+            created by the website you are using (Kaspersky). It is the third-party cookies that are more concerning and the ones that follow you around
+            on the internet.
         </p>
         <p>
             Third-party cookies can be created by advertisers whose ads appear on the website you are currently viewing. These advertisers may also
@@ -64,12 +71,12 @@
             new session despite having already set their preferences (Machuletz and Böhme 481). There are likely many other tactics that are currently
             in use by various websites, designed to make the act of rejecting cookies as tedious as possible. <br>
             <button id="open_banner">Like this one</button>
-            <div id="snackbar">Don't worry, this website doesn't actually collect cookies.</div>
         </p>
+        <div id="snackbar">Don't worry, this website doesn't actually collect cookies.</div>
         <div id="cookie_banner" class="popup">
             <div class="popup-content">
-                <h1>This website uses cookies.</h1>
-                <p>By accepting cookies, you agree...</p>
+                <h2 style="padding-bottom: 15px; color: #007acc;">This website uses cookies.</h2>
+                <div style="font-size: 1.1em;">Cookies help us By clicking “Accept all cookies”, you agree that we can store cookies on your device and disclose information in accordance with our cookies policy.</div>
                 <button id="accept_cookies">Accept all cookies</button>
                 <button id="reject_cookies">Reject all cookies</button>
             </div>
@@ -82,9 +89,8 @@
             conscious decision and more of an automated one, serving the primary purpose, for the user, of eliminating an obstacle to a website rather
             than consenting to being tracked.
         </p>
-        <div class="ndiv">
-            The “necessary cookies,” that one must accept do not carry any personal data and thus do not require consent (Machuletz and Böhme 481).
-        </div>
+        <div class="tip">However, the “necessary cookies,” that one often has no choice but to accept, do not carry any personal data and thus do not require consent
+            (Machuletz and Böhme 481).</div>
         <h1 id="supercookies" class="heading">Supercookies</h1>
         <p>
             Supercookies aren’t technically cookies, but they are similar in their ability to gather information on users across multiple websites.
@@ -102,15 +108,13 @@
         <h1 id="clearing" class="heading">Clearing cookies</h1>
         <p>
             In most browsers, you may use the Ctrl+Shift+Del or Command+Shift+Del shortcut to clear your cookies (Fisher). For more detailed instructions,
-            check out <a href= "https://www.lifewire.com/how-to-delete-cookies-2617981" target="_blank"
-            title="https://www.lifewire.com/how-to-delete-cookies-2617981">this tutorial</a>
+            check out <a href= "https://www.lifewire.com/how-to-delete-cookies-2617981" target="_blank">this tutorial</a>
             by Lifewire.
             Why delete cookies? Sometimes cookies may pick up information you would rather keep secret. Perhaps you have an addiction, medical illness,
             or other embarrassing secret that could be revealed from your browsing history. Would you want this information available to advertisers
             when they decide which ads may be most effective toward you? Your data can also be sold to airlines, hotel booking websites, and others to
             determine the highest price you would be willing to pay when entering their website.
         </p>
-        <div class="ndiv"> Learn more about dynamic pricing and other information about privacy <a href="privacy.html" target="_blank">here</a></div>
         <p>
             Fun fact: Google’s incognito browsing still allows third-party cookies but just deletes them from your browsing session. Although this may
             not seem concerning, did you know that there are other ways to track your browsing activity aside from cookies? Browser fingerprinting is
@@ -119,7 +123,10 @@
             cookies can still match that activity to your device through use of fingerprinting. In other words, your private browsing session isn’t
             as private as you think.
         </p>
-        <div class="ndiv">Learn more about browser fingerprinting and how to fight it <a href="fingerprints.html" target="_blank">here</a></div>
+        <div class="tip">
+            Learn more about dynamic pricing and other information about privacy <a href="privacy.html" target="_blank">here</a> <br>
+            Learn more about browser fingerprinting and how to fight it <a href="fingerprints.html" target="_blank">here</a>
+        </div>
         <div class="ndiv"><a href="cookies.html">Back to top</a></div>
 
 
@@ -156,10 +163,13 @@
                 button.style.top = Math.floor(Math.random() * (maxHeight+1)) + 'px';
             });
 
-            window.addEventListener("click", function (event) {
-                if (event.target == cookie_banner) {
-                    cookie_banner.classList.remove("show");
-                }
+            // Cookie Clicker easter egg
+            let cc = document.getElementById('counter_plus');
+            let counter = document.getElementById('counter');
+            let count = 0;
+            cc.addEventListener('click', function() {
+                count++;
+                counter.innerHTML = count;
             });
 
         </script>

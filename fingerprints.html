@@ -5,6 +5,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="https://fonts.gstatic.com/s/e/notoemoji/15.0/1f5ff/32.png">
         <title>Internet Privacy</title>
 
         <link href="styles.css" rel="stylesheet">
@@ -20,6 +21,7 @@
         </ul>
         <h1 class="header"><img class="header_img" src="thumbprint.png" alt="thumbprint" width=270>Fingerprints</h1>
         <div class="container-box">
+            <div class="content-header">In this section:</div>
             <ul class="content-box">
                 <li><a onclick="location.href='#f_definition';">What are fingerprints?</a></li>
                 <li><a onclick="location.href='#types';">Types of fingerprinting</a></li>
@@ -36,7 +38,7 @@
             they access. This means that your unique profile, or “fingerprint,” can be used to track your activity across the Internet, even when using
             private or incognito browsing, making it more invasive than cookies (Avast).
         </p>
-        <div class="ndiv">
+        <div class="tip">
             Examples of some information scripts can obtain: your browser and its settings, installed plugins, extensions, or other software, your
             timezone, your device’s language, font, or operating system, whether you have an adblocker installed
         </div>
@@ -62,14 +64,24 @@
             </li>
         </ul>
         <br>
+        <p>
+            Below is an example of canvas fingerprinting, courtesy of Jon B. on <a href="https://codepen.io/jon/pen/rwBbgQ"
+            target="_blank" title="https://codepen.io/jon/pen/rwBbgQ">CodePen</a>. Visit the page to see how your browser differs in
+            the graphic and hash from mine.
+        </p>
+        <img src="canvas_fingerprint.png" alt="An example of canvas fingerprinting." width=650 style="margin-left: 22%;">
+        <br><br>
+        <p> Here is one by <a href="https://codepen.io/run-time/pen/XJNXWV" target="_blank">Dave Alger</a>
+             that shows information of your device gathered by Javascript fingerprinting.
+         </p>
         <h1 class="heading" id="why_dangerous">Why is fingerprinting dangerous?</h1>
         <p>
             Though you can delete your cookies, there is no way to delete your browser fingerprint, nor may they be stopped by VPNs (Avast). The scripts
             that collect your information are also vital for your browser to run the website, without them the website would break (Avast). Fingerprints
             can be used to track your activity and link it to you despite all other protections you may take. Check how well your computer set-up defends
-            against fingerprinting <a href="https://browserleaks.com/canvas" target="_blank" title="https://browserleaks.com/canvas">here</a> (unique = bad).
-            For a more in-depth explanation of what fingerprinting looks like, check out <a href="https://coveryourtracks.eff.org/" target="blank"
-            title="https://coveryourtracks.eff.org/">this website</a>.
+            against canvas fingerprinting <a href="https://browserleaks.com/canvas" target="_blank">here</a>
+            (unique = bad). For a more in-depth explanation of what fingerprinting looks like, check out <a href="https://coveryourtracks.eff.org/"
+            target="blank">this website</a>.
         </p>
         <h1 class="heading" id="protection">Preventing fingerprinting</h1>
         <p>
@@ -83,7 +95,7 @@
             fingerprinting, such as Avast AntiTrack ($49.99/year).
         </p>
         <p>
-            Furthermore, some believe fingerprinting will become less dangerous as the Internet evolves–e.g. the departure from plugins such as the
+            Some believe fingerprinting will become less dangerous as the Internet evolves–e.g. the departure from plugins such as the
             once ubiquitous Flash–with one study estimating the removal of HTTP headers and browser plugins to decrease the occurrence of unique
             fingerprints by 36% (Laperdrix et al.).
         </p>
