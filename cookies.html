@@ -9,10 +9,10 @@
         <title>Internet Privacy</title>
 
         <link href="styles.css" rel="stylesheet">
-        <script src="script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
     </head>
     <body>
-        <ul class="navbar">
+        <ul class="navbar" aria-label="site" role="navigation">
             <li><n onclick="location.href='index.html';">Home</n></li>
             <li><n onclick="location.href='cookies.html';" class="active">Cookies</n></li>
             <li><n onclick="location.href='fingerprints.html';">Fingerprints</n></li>
@@ -20,12 +20,12 @@
             <li><n onclick="location.href='acknowledgements.html';">Acknowledgements</n></li>
         </ul>
         <div id="counter" class="ndiv"></div>
-        <h1 class="header"><img class="header_img" usemap="#cookiemap" src="cookie_clicker.jpg" alt="cookie" width=320>Cookies</h1>
+        <h1 class="header"><img class="header_img" usemap="#cookiemap" src="cookie_clicker.jpg" alt="cookie" width=27%>Cookies</h1>
         <map name="cookiemap">
             <area id="counter_plus" shape="circle" coords="160,80,63">
         </map>
         <br style="display:none;">
-        <div class="container-box">
+        <div class="container-box" aria-label="page" role="navigation">
             <div class="content-header">In this section:</div>
             <ul class="content-box">
                 <li><a onclick="location.href='#c_definition';">What are cookies?</a></li>
@@ -72,13 +72,14 @@
             in use by various websites, designed to make the act of rejecting cookies as tedious as possible. <br>
             <button id="open_banner">Like this one</button>
         </p>
-        <div id="snackbar">Don't worry, this website doesn't actually collect cookies.</div>
-        <div id="cookie_banner" class="popup">
+        <div id="snackbar" aria-label="popup-content" role="complementary">Don't worry, this website doesn't actually collect cookies.</div>
+        <div id="cookie_banner" class="popup" aria-label="cookie banner" role="complementary">
             <div class="popup-content">
                 <h2 style="padding-bottom: 15px; color: #007acc;">This website uses cookies.</h2>
-                <div style="font-size: 1.1em;">Cookies help us By clicking “Accept all cookies”, you agree that we can store cookies on your device and disclose information in accordance with our cookies policy.</div>
-                <button id="accept_cookies">Accept all cookies</button>
-                <button id="reject_cookies">Reject all cookies</button>
+                <div style="font-size: 1.1em; max-width:100%; max-height:100%">Cookies help us By clicking “Accept all cookies”, you agree that we can store cookies on your device and
+                    disclose information in accordance with our cookies policy.<br><br><br><br></div>
+                <button id="accept_cookies" style="opacity:100%;">Accept all cookies</button>
+                <button id="reject_cookies" style="opacity:100%;">Reject all cookies</button>
             </div>
         </div>
         <p>
@@ -89,7 +90,8 @@
             conscious decision and more of an automated one, serving the primary purpose, for the user, of eliminating an obstacle to a website rather
             than consenting to being tracked.
         </p>
-        <div class="tip">However, the “necessary cookies,” that one often has no choice but to accept, do not carry any personal data and thus do not require consent
+        <div class="tip" aria-label="tip" role="complementary">However, the “necessary cookies,” that one often has no choice but to accept, do not carry
+            any personal data and thus do not require consent
             (Machuletz and Böhme 481).</div>
         <h1 id="supercookies" class="heading">Supercookies</h1>
         <p>
@@ -123,11 +125,11 @@
             cookies can still match that activity to your device through use of fingerprinting. In other words, your private browsing session isn’t
             as private as you think.
         </p>
-        <div class="tip">
+        <div class="tip" aria-label="tip" role="complementary">
             Learn more about dynamic pricing and other information about privacy <a href="privacy.html" target="_blank">here</a> <br>
             Learn more about browser fingerprinting and how to fight it <a href="fingerprints.html" target="_blank">here</a>
         </div>
-        <div class="ndiv"><a href="cookies.html">Back to top</a></div>
+        <footer class="ndiv"><a href="cookies.html">Back to top</a></footer>
 
 
         <script>
@@ -142,8 +144,10 @@
             open_banner.addEventListener("click", function () {
                 cookie_banner.classList.add("show");
                 /* Reset the position each time popup opens */
-                button.style.left = "400px";
-                button.style.top = "355px";
+                /*button.style.left = "52%"; */
+                button.style.margin = "-3% auto";
+                button.style.marginLeft = "24%"; /* a temporary solution */
+
             });
             accept_cookies.addEventListener("click", function() {
                 cookie_banner.classList.remove("show");
@@ -156,7 +160,7 @@
                 alert("Congratulations! You managed to evade the cookies.");
             })
 
-            /* Runaway button--referenced tutorial by PortEXE:
+            /* Runaway button--referenced tutorial by Youtuber PortEXE:
                https://www.youtube.com/watch?v=Cy6ALx6gx9w */
             reject_cookies.addEventListener("mouseover", () => {
                 button.style.left = Math.floor(Math.random() * (maxWidth+1)) + 'px';
