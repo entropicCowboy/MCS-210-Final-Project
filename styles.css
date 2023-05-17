@@ -35,11 +35,26 @@ body {
     padding: 1rem;
 }
 
+.bullet-list li::before {
+    content: "\2022"; /* unicode symbol for bullet points */
+    color: #007acc;
+    font-weight: bold;
+    font-size: 1.25em;
+    display: inline-block;
+    width: 1em;
+    margin-left: -3em;
+}
+
 button {
     background-color: #007acc;
+    opacity: 80%;
     margin-top: 1em;
     border-color: #007acc;
     color: #fff;
+}
+
+button:hover {
+    opacity: 100%; /* make it more vibrant on hover */
 }
 
 .container-box {
@@ -47,9 +62,12 @@ button {
     max-height: 1000px;
     padding: 20px;
     margin-bottom: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
     border-radius: 5px;
     background-color: #f1f1f1;
     border: 1px solid #e3e3e3;
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
     box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
     margin-left: 21%;
@@ -67,6 +85,11 @@ button {
     display: inline-block;
     width: 1em;
     margin-left: -3em;
+}
+
+.content-box li:hover {
+    color: #007acc;
+    /*font-size: 1.26em;*/ /* looked fun but too annoying */
 }
 
 .content-header {
@@ -110,8 +133,11 @@ button {
     width: 100%;
     height: 100%;
     text-align: center;
+    -moz-transition: transform 0.6s;
     transition: transform 0.6s;
     transform-style: preserve-3d;
+    -mox-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -123,6 +149,7 @@ button {
     position: absolute;
     width: 100%;
     height: 100%;
+    -moz-backface-visibility: hidden;
     -webkit-backface-visibility: hidden; /* for Safari */
     backface-visibility: hidden;
 }
@@ -139,23 +166,23 @@ button {
 }
 
 #tor {
-    margin-left: 350px;
+    margin-left: 22%;
 }
 
 #brave {
-    margin-left: 570px;
+    margin-left: 35%;
 }
 
 #firefox {
-    margin-left: 790px;
+    margin-left: 49%;
 }
 
 #safari {
-    margin-left: 1010px;
+    margin-left: 63%;
 }
 
 #chrome {
-    margin-left: 1230px;
+    margin-left: 78%;
     padding-bottom: 16em;
 }
 
@@ -249,12 +276,14 @@ p {
 
 .popup-content {
     background-color: white;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
     border-radius: 5px;
-    margin: 10% auto;
+    margin: 20% auto;
     padding: 20px;
     border: 1px solid #888888;
     width: 40%;
-    height: 35%;
+    max-height: 80%;
     font-weight: bolder;
 }
 
@@ -275,12 +304,11 @@ p {
 }
 
 #accept_cookies {
-    margin-left: 20px;
-    bottom: 437px; /* had to get it to line up w/ reject */
+    margin:-3% auto;
 }
 
 #reject_cookies {
-    margin-left: 250px;
+    margin:-3% auto;
 }
 
 .show {
@@ -296,6 +324,8 @@ p {
   background-color: #333;
   color: #fff;
   text-align: center;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px; /* Rounded borders */
   padding: 16px;
   position: fixed; /* Sit on top of the screen */
@@ -322,6 +352,7 @@ p {
 /* Followed webnots tutorial:
    https://www.webnots.com/how-to-create-custom-css-text-boxes */
 .tip {
+    -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
     color: white;
@@ -332,6 +363,8 @@ p {
     margin-left: 22%;
     margin-right: 10%;
     position:relative;
+    -moz-box-shadow: 0px, 1px, 5px, #999;
+    -webkit-box-shadow: 0px, 1px, 5px, #999;
     box-shadow: 0px, 1px, 5px, #999;
 }
 
@@ -341,4 +374,5 @@ ul {
     margin-left: 24%;
     margin-right: 5%;
     font-size: 1.25em;
+    padding-left: 50px;
 }

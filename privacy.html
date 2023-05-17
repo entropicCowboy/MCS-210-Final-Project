@@ -12,16 +12,16 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <ul class="navbar">
+        <ul class="navbar" aria-label="site" role="navigation">
             <li><n onclick="location.href='index.html';">Home</n></li>
             <li><n onclick="location.href='cookies.html';">Cookies</n></li>
             <li><n onclick="location.href='fingerprints.html';">Fingerprints</n></li>
             <li><n onclick="location.href='privacy.html';" class="active">Privacy</n></li>
             <li><n onclick="location.href='acknowledgements.html';">Acknowledgements</n></li>
         </ul>
-        <h1 class="header"><img class="header_img" src="ss_agent.png" alt="secret service agent" width=270 style="padding-left: 0.7em;
+        <h1 class="header"><img class="header_img" src="ss_agent.png" alt="secret service agent" width=22% style="padding-left: 0.7em;
         padding-right:0.7em">Privacy</h1>
-        <div class="container-box">
+        <div class="container-box" aria-label="page" role="navigation">
             <div class="content-header">In this section:</div>
             <ul class="content-box">
                 <li><a onclick="location.href='#data_brokers';">Data brokers</a></li>
@@ -64,12 +64,14 @@
         </p>
         <h1 class="heading">Protecting Your Privacy</h1>
         <h3 id="browsers" class="heading">Browsers</h3>
-        <div class="ndiv">*Hover to see details about each browser</div><br>
-
-        <div id="tor" class="flip-card">
+        <p>
+            My choice: Brave<br>
+            <sub>*Hover over an icon to see details about each browser</sub>
+        </p>
+        <div id="tor" class="flip-card" aria-label="card" role="complementary">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="tor.png" alt="Tor browser logo" style="width:200px;height:200px">
+                    <img src="tor.png" alt="Tor browser logo" style="max-width:100%;">
                 </div>
                 <div class="flip-card-back">
                     <h1>Tor</h1>
@@ -80,10 +82,10 @@
             </div>
         </div>
 
-        <div id="brave" class="flip-card">
+        <div id="brave" class="flip-card" aria-label="card" role="complementary">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="brave.png" alt="Brave browser logo" style="width:200px;height:200px">
+                    <img src="brave.png" alt="Brave browser logo" style="max-width:85%;">
                 </div>
                 <div class="flip-card-back">
                     <h1>Brave</h1>
@@ -95,10 +97,10 @@
             </div>
         </div>
 
-        <div id="firefox" class="flip-card">
+        <div id="firefox" class="flip-card" aria-label="card" role="complementary">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="firefox.png" alt="Firefox browser logo" style="width:200px;height:200px">
+                    <img src="firefox.png" alt="Firefox browser logo" style="max-width:95%;">
                 </div>
                 <div class="flip-card-back">
                     <h1>Firefox</h1>
@@ -109,10 +111,10 @@
             </div>
         </div>
 
-        <div id="safari" class="flip-card">
+        <div id="safari" class="flip-card" aria-label="card" role="complementary">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="safari.png" alt="Safari browser logo" style="width:200px;height:200px">
+                    <img src="safari.png" alt="Safari browser logo" style="max-width:100%;">
                 </div>
                 <div class="flip-card-back">
                     <h1>Safari</h1>
@@ -122,15 +124,16 @@
             </div>
         </div>
 
-        <div id="chrome" class="flip-card">
+        <div id="chrome" class="flip-card" aria-label="card" role="complementary">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="chrome.png" alt="Chrome browser logo" style="width:200px;height:200px">
+                    <img src="chrome.png" alt="Chrome browser logo" style="max-width:95%">
                 </div>
                 <div class="flip-card-back">
                     <h1>Chrome</h1>
                     <div>Most popular browser</div>
                     <div>Great functionality</div>
+                    <div>No privacy</div>
                     <div>Secretive about tracking habits</div>
                 </div>
             </div>
@@ -144,32 +147,46 @@
             document.addEventListener('DOMContentLoaded', function() {
                 let t = document.querySelector('#tor');
                 t.addEventListener('mouseover', function() {
+                    document.getElementById('browser_info').style.color = "purple";
+                    document.getElementById('browser_info2').style.color = "purple";
                     document.querySelector('#browser_info').innerHTML = 'Tor prioritizes providing users with anonymity and bypassing online censorship through “tunneling” your Internet traffic, ensuring no one can see both your origin and destination. However, this function also makes the browser significantly slower than others, making it less suited for daily use and just for when you want extra privacy when browsing.';
                     document.querySelector('#browser_info2').innerHTML = 'Tor’s website boasts the following properties: <br>“Your internet service provider, and anyone watching your connection locally, will not be able to track your internet activity, including the names and addresses of the websites you visit." <br>"The operators of the websites and services that you use, and anyone watching them, will see a connection coming from the Tor network instead of your real Internet (IP) address, and will not know who you are unless you explicitly identify yourself.” <br><br> <a href="https://www.torproject.org/download/" target="_blank" title="https://www.torproject.org/download/">Download Tor browser</a> for Windows, Mac OS, or Linux';
                 });
                 let b = document.querySelector('#brave');
                 b.addEventListener('mouseover', function() {
+                    document.getElementById('browser_info').style.color = "orange";
+                    document.getElementById('browser_info2').style.color = "orange";
                     document.querySelector('#browser_info').innerHTML = 'Brave is one of the most popular private browsers and is well-suited for everyday use. Brave blocks third-party cookies and other forms of online tracking by default (in its normal, non-private browsing mode). It has protection against fingerprinting and scripts, invasive ads, phishing, and includes a built-in connection with Tor, allowing you to open a new private browsing window with Tor’s anonymized network routing (Brave). Brave also provides easy access to turn on or off different privacy measures as they can sometimes cause websites to break. The button is located to the right of the search bar and is as easy as toggling a button. Brave has the additional bonus of showing which websites or companies are trying to track you. ';
                     document.querySelector('#browser_info2').innerHTML = 'If you have heard about Brave ads, fear not, this feature does not involve online tracking. Rather, it involves viewing anonymized ads–your browsing history may be used to suggest ads, but this data never reaches Brave’s servers–to earn BATs (Basic Attention Tokens) which may be exchanged for gift cards, crypto currency, or used to support content creators (Brave). This feature is free but NOT enabled by default, you must opt-in in order to receive the ads. <br><br> <a href="https://brave.com/download/" target="_blank" title="https://brave.com/download/">Download Brave browser</a> for Windows, Mac OS, or Linux';
                 });
                 let f = document.querySelector('#firefox');
                 f.addEventListener('mouseover', function() {
-                    document.querySelector('#browser_info').innerHTML = '';
-                    document.querySelector('#browser_info2').innerHTML = 'Firefox can be made as secure as Brave, however, it collects data by default (telemetry data collection). You may opt out of this as well as change other settings within the browser to block fingerprinting, phishing, and pop ups (Simonson and Bottorff). Firefox is a pretty transparent company and does offer some great security features, so if you would prefer using a more well-known browser and don’t mind spending the time to change a few settings, this browser may work well for you. a <a href="https://restoreprivacy.com/firefox-privacy/" target="_blank" title="https://restoreprivacy.com/firefox-privacy/">thorough tutorial</a> on how to make Firefox more private. <br><br> <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" title="https://www.mozilla.org/en-US/firefox/new/">Download Firefox browser</a> for Windows, Mac OS, or Linux';
+                    document.getElementById('browser_info').style.color = "red";
+                    document.getElementById('browser_info2').style.color = "red";
+                    document.querySelector('#browser_info').innerHTML = 'Firefox can be made as secure as Brave, however, it collects data by default (telemetry data collection). You may opt out of this as well as change other settings within the browser to block fingerprinting, phishing, and pop ups (Simonson and Bottorff). Firefox is a pretty transparent company and does offer some great security features, so if you would prefer using a more well-known browser and don’t mind spending the time to change a few settings, this browser may work well for you. a <a href="https://restoreprivacy.com/firefox-privacy/" target="_blank" title="https://restoreprivacy.com/firefox-privacy/">thorough tutorial</a> on how to make Firefox more private. <br><br> <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" title="https://www.mozilla.org/en-US/firefox/new/">Download Firefox browser</a> for Windows, Mac OS, or Linux';
+                    document.querySelector('#browser_info2').innerHTML = '';
                 });
                 let s = document.querySelector('#safari');
                 s.addEventListener('mouseover', function() {
-                    document.querySelector('#browser_info').innerHTML = '';
-                    document.querySelector('#browser_info2').innerHTML = 'Safari is not the most private browser, but the privacy settings that are provided are the default. Safari includes cross-site tracking, third-party cookie, and fingerprinting prevention. Safari is decently private but can be made more so with browser extensions, such as Ghostery.';
+                    document.getElementById('browser_info').style.color = "blue";
+                    document.getElementById('browser_info2').style.color = "blue";
+                    document.querySelector('#browser_info').innerHTML = 'Safari is not the most private browser, but the privacy settings that are provided are the default. Safari includes cross-site tracking, third-party cookie, and fingerprinting prevention. Safari is decently private but can be made more so with browser extensions, such as Ghostery.';
+                    document.querySelector('#browser_info2').innerHTML = '';
                 });
                 let c = document.querySelector('#chrome');
                 c.addEventListener('mouseover', function() {
-                    document.querySelector('#browser_info').innerHTML = 'While Chrome excels functionally and in popularity, it is most often considered one of the worst browsers for maintaining privacy. Chrome does not openly disclose much of what it tracks of its users, but a "<a href="https://developer.apple.com/app-store/app-privacy-details/" target="_blank" title="https://developer.apple.com/app-store/app-privacy-details/">privacy nutrition label"</a> requirement for IOS apps resulted in the tracking information of the Chrome mobile browser shown below. <br><br> <img src="google_app_privacy.jpg" alt="Google app tracking data" width="1000px">';
+                    document.getElementById('browser_info').style.color = "green";
+                    document.getElementById('browser_info2').style.color = "green";
+                    document.querySelector('#browser_info').innerHTML = 'While Chrome excels functionally and in popularity, it is most often considered one of the worst browsers for maintaining privacy. Chrome does not openly disclose much of what it tracks of its users, but a "<a href="https://developer.apple.com/app-store/app-privacy-details/" target="_blank" title="https://developer.apple.com/app-store/app-privacy-details/">privacy nutrition label"</a> requirement for IOS apps resulted in the tracking information of the Chrome mobile browser shown below. <br><br> <img src="google_app_privacy.jpg" alt="Google app tracking data" width="90%">';
                     document.querySelector('#browser_info2').innerHTML = 'As one Forbes article describes, “it is safe to assume all your browsing actions on Google are collected, saved to your data profile and used for targeted advertising” (Simonson and Bottorff). If you are set on continuing to use Chrome, you may make your browsing a little more private by installing protective browser extensions, such as the ones listed below. If you are interested in learning more about the data some apps collect and share about you, check out <a href="https://www.pcloud.com/invasive-apps" target="_blank" title="https://www.pcloud.com/invasive-apps">this article</a> <br><br> <a href="https://brave.com/download/" target="_blank" title="https://brave.com/download/">Download Chrome browser</a> for Windows, Mac OS, or Linux';
                 });
             });
         </script>
         <p>
+            Installing a new browser is a pretty simple process. You can usually easily find the download button on the browser's website, then, after the
+            file has been downloaded, click it to initiate the installation process (don't worry about allowing the program to make changes to your device).
+            The program will do all the work for you, and, upon opening the browser after it's installed, will usually prompt you for the option to make it
+            your default browser--otherwise, a simple Google search should provide you with the steps to find how to do so in your device's settings.
             For more information on each browser, you can read these articles: <a href="https://www.forbes.com/advisor/business/software/secure-browsers/"
             target="_blank" title="https://www.forbes.com/advisor/business/software/secure-browsers/">Most Secure Browsers Of 2023 – Forbes Advisor</a>,
             <a href="https://privacysavvy.com/security/safe-browsing/most-secure-browsers/" target="_blank">
@@ -183,9 +200,9 @@
         </p>
         <p>
             Check out this cheeky warning for incognito browsing from an old version of Chrome: <br><br>
-            <img src="old_incognito.png" alt="old Google Chrome Incognito notice" width="900px"> <br><br>
+            <img src="old_incognito.png" alt="old Google Chrome Incognito notice" width="85%"> <br><br>
             Strangely enough, Google removed the comment about secret agents in their updated warning:<br><br>
-            <img src="incognito.png" alt="current Google Chrome Incognito notice" width="900px">
+            <img src="incognito.png" alt="current Google Chrome Incognito notice" width="85%">
         </p>
         <h3 id="vpn" class="heading">VPNs</h3>
         <p>
@@ -199,7 +216,7 @@
         <p style="padding-bottom: 0;">
             Here are some well-rated VPNs that each have the standard VPN features:
         </p>
-        <ul class="content-box">
+        <ul class="bullet-list">
             <li>
                 <a href="https://protonvpn.com/" target="_blank">ProtonVPN</a> (Free, ~$5.50/month, ~$8.75/month):
                 the free version has no limit on data usage, but you can only access servers in the United States, Japan, and the Netherlands.
@@ -217,12 +234,12 @@
                 this article</a>
         </li>
         </ul>
-        <h3 class="heading">Ad Blockers</h3>
         <br>
+        <h3 class="heading">Ad Blockers</h3>
         <p style="padding-bottom: 0;">
             Here are some great, and free, ad blocking extensions:
         </p>
-        <ul class="content-box">
+        <ul class="bullet-list">
             <li>
                 <a href="https://ublockorigin.com/" target="_blank">uBlock Origin</a> (Free, Available for
                 Chrome, Firefox, Brave, Edge, and Opera): PCMag declared this one the “best for blocking everything, everywhere”
@@ -238,6 +255,7 @@
             </li>
         </ul>
         <p>
+            Browser extensions are incredibly easy to install, involving only the click of a few buttons.
             For a more detailed review on each Ad Blocker and others, visit <a href="https://www.pcmag.com/picks/best-ad-blockers" target="_blank">
             The Best Ad Blockers for 2023 | PCMag</a> or
             <a href="https://www.techradar.com/best/our-pick-of-the-best-ad-blockers-for-year" target="_blank">
@@ -257,17 +275,17 @@
         </p>
         <p>
             There are many different options available for those looking to protect their privacy online, and most of them, including installing a new
-            browser, are relatively easy and quick. However, there's always a chance that despite the security measures you take, you will still be
-            identified, perhaps by fingerprinting or perhaps another new method of online tracking. Or, maybe this really all was for nothing, and
-            you'll just get hacked.
+            browser, are relatively easy and quick. However, you should never expect to maintain complete privacy on the Internet because there's always
+            a chance that despite the security measures you take, you will still be identified, perhaps by fingerprinting or perhaps another new method
+            of online tracking. Or, maybe this really all was for nothing, and you'll just get hacked.
         </p>
 
         <p>Oh no, a hacker has appeared! There isn't really a weapon you can use against him, so choose a door to hide behind!</p>
-        <img id="door1" class="door" src="door.png" alt="Door" width="170px">
-        <img id="door2" class="door" src="door.png" alt="Door" width="170px">
-        <img id="door3" class="door" src="door.png" alt="Door" width="170px">
-        <img id="door4" class="door" src="door.png" alt="Door" width="170px">
-        <img id="door5" class="door" src="door.png" alt="Door" width="170px">
+        <img id="door1" class="door" src="door.png" alt="Door" max-width="11%">
+        <img id="door2" class="door" src="door.png" alt="Door" max-width="11%">
+        <img id="door3" class="door" src="door.png" alt="Door" max-width="11%">
+        <img id="door4" class="door" src="door.png" alt="Door" max-width="11%">
+        <img id="door5" class="door" src="door.png" alt="Door" max-width="11%">
         <br>
         <br>
         <div id="feedback" class="ndiv"></div>
@@ -316,7 +334,7 @@
             });
         </script>
         <br>
-        <div class="ndiv"><a href="privacy.html">Back to top</a></div>
+        <footer class="ndiv"><a href="privacy.html">Back to top</a></footer>
     </body>
 </html>
 

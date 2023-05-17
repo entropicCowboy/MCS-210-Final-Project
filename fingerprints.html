@@ -12,15 +12,15 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <ul class="navbar">
+        <ul class="navbar" aria-label="site" role="navigation">
             <li><n onclick="location.href='index.html';">Home</n></li>
             <li><n onclick="location.href='cookies.html';">Cookies</n></li>
             <li><n onclick="location.href='fingerprints.html';" class="active">Fingerprints</n></li>
             <li><n onclick="location.href='privacy.html';">Privacy</n></li>
             <li><n onclick="location.href='acknowledgements.html';">Acknowledgements</n></li>
         </ul>
-        <h1 class="header"><img class="header_img" src="thumbprint.png" alt="thumbprint" width=270>Fingerprints</h1>
-        <div class="container-box">
+        <h1 class="header"><img class="header_img" src="thumbprint.png" alt="thumbprint" width=22%>Fingerprints</h1>
+        <div class="container-box" aria-label="page" role="navigation">
             <div class="content-header">In this section:</div>
             <ul class="content-box">
                 <li><a onclick="location.href='#f_definition';">What are fingerprints?</a></li>
@@ -38,7 +38,7 @@
             they access. This means that your unique profile, or “fingerprint,” can be used to track your activity across the Internet, even when using
             private or incognito browsing, making it more invasive than cookies (Avast).
         </p>
-        <div class="tip">
+        <div class="tip" aria-label="tip" role="complementary">
             Examples of some information scripts can obtain: your browser and its settings, installed plugins, extensions, or other software, your
             timezone, your device’s language, font, or operating system, whether you have an adblocker installed
         </div>
@@ -49,7 +49,7 @@
             of users trackable with their fingerprint remaining stable an average of 10.7-11.9 weeks (Pugliese et al. 572).
         </p>
         <h1 class="heading" id="types">Types of fingerprinting</h1>
-        <ul class="content-box">
+        <ul class="bullet-list">
             <li>
                 <strong>Canvas fingerprinting:</strong> this forces your browser to draw a complex image that is not visible to the user, then performs
                 an analysis on the result to identify information about your browser, operating system, graphics card, and more (Avast).
@@ -69,7 +69,7 @@
             target="_blank" title="https://codepen.io/jon/pen/rwBbgQ">CodePen</a>. Visit the page to see how your browser differs in
             the graphic and hash from mine.
         </p>
-        <img src="canvas_fingerprint.png" alt="An example of canvas fingerprinting." width=650 style="margin-left: 22%;">
+        <img src="canvas_fingerprint.png" alt="An example of canvas fingerprinting." width=47% style="margin-left: 22%;">
         <br><br>
         <p> Here is one by <a href="https://codepen.io/run-time/pen/XJNXWV" target="_blank">Dave Alger</a>
              that shows information of your device gathered by Javascript fingerprinting.
@@ -99,6 +99,6 @@
             once ubiquitous Flash–with one study estimating the removal of HTTP headers and browser plugins to decrease the occurrence of unique
             fingerprints by 36% (Laperdrix et al.).
         </p>
-        <div class="ndiv"><a href="fingerprints.html">Back to top</a></div>
+        <footer class="ndiv"><a href="fingerprints.html">Back to top</a></footer>
     </body>
 </html>
